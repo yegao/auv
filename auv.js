@@ -9,7 +9,7 @@
 	var auv = function(o){
 		return new auv.prototype.init(o);
 	}
-	
+
 	auv.prototype = {
 		constructor:auv,
 		init:function(o){
@@ -89,8 +89,20 @@
 				this.bridge.only(one,type,callback);
 			}
 		},
+		state:{
+			set:function(){},
+			get:function(){},
+			force:function(){},
+			diff:function(prev){
+				if(this.states){
+					if(prev.state != this.states){
+
+					}
+				}
+			}
+		}
 	}
-	
+
 	auv.prototype.init.prototype = auv.prototype;
 	//extends
 	auv.uuid = function (len, radix) {
